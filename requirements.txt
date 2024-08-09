@@ -1,5 +1,4 @@
 flask
 SpeechRecognition
 pyttsx3
-webbrowser
 smtplib
