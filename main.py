@@ -3,7 +3,7 @@ import speech_recognition as sr
 import pyttsx3
 #import webbrowser
 import datetime
-import smtplib
+#import smtplib
 import requests
 import os
 # import pyaudio
@@ -152,10 +152,10 @@ def send_email():
     context = ssl.create_default_context()
 
     # Connect to the SMTP server and send email
-    with smtplib.SMTP(smtp_server, port) as server:
-        server.starttls(context=context)
-        server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, f'Subject: {subject}\n\n{body}')
+    # with smtplib.SMTP(smtp_server, port) as server:
+    #     server.starttls(context=context)
+    #     server.login(sender_email, password)
+    #     server.sendmail(sender_email, receiver_email, f'Subject: {subject}\n\n{body}')
 
 def get_weather_info():
     # Make a request to OpenWeatherMap API (assuming you have an API key)
