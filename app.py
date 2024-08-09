@@ -1,14 +1,3 @@
-import os
-try:
-    os.system('sudo apt install -y espeak')
-except:
-    exit("Failed to install the espeak")
-
-# import subprocess
-
-# package_name = "espeak"
-# subprocess.run(["sudo", "apt", "install", "-y", package_name], check=True)
-
 from flask import Flask, request, jsonify, render_template, session
 import speech_recognition as sr
 import pyttsx3
