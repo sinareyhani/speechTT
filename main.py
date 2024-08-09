@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template, session
 import speech_recognition as sr
 import pyttsx3
-import webbrowser
+#import webbrowser
 import datetime
 import smtplib
 import requests
@@ -47,7 +47,7 @@ def get_information():
                     search_google(search_query)
                     speak(f"Searching Google for {search_query}")
                  else:
-                    webbrowser.open("https://www.google.com/")
+                    #webbrowser.open("https://www.google.com/")
                     speak('Opening Google...')
 
             elif 'open youtube' in query:
@@ -58,7 +58,7 @@ def get_information():
                     search_youtube(search_query)
                     speak(f"Searching on youtube for {search_query}")
                 else:
-                    webbrowser.open("https://www.youtube.com/")
+                   # webbrowser.open("https://www.youtube.com/")
                     speak('Opening youtube...')
 
             elif 'open google maps' in query:
@@ -69,7 +69,7 @@ def get_information():
                     search_google_maps(search_query)
                     speak(f"Searching on google maps for {search_query}")
                 else:
-                    webbrowser.open("https://www.google.com/maps/")
+                    #webbrowser.open("https://www.google.com/maps/")
                     speak('Opening google maps...')
 
             elif 'play music' in query:
@@ -196,15 +196,15 @@ def execute_command(command):
 
 def search_google(query):
     search_url = f"https://www.google.com/search?q={query}"
-    webbrowser.open(search_url)
+    #webbrowser.open(search_url)
 
 def search_youtube(query):
     search_url = f"https://www.youtube.com/results?search_query={query}"
-    webbrowser.open(search_url)
+    #webbrowser.open(search_url)
 
 def search_google_maps(query):
     search_url = f"https://www.google.com/maps/search/{query}"
-    webbrowser.open(search_url)
+    #webbrowser.open(search_url)
 
 def play_music(song_name=None):
     music_dir = "./Music"  # Update with your music directory path
