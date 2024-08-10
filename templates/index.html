@@ -92,18 +92,18 @@
                 const transcript = event.results[0][0].transcript.trim();
                 $('#output').text('Recognized Command: ' + transcript);
                 
-                $.ajax({
-                    url: '/get-information',
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify({ query: transcript }),
-                    success: function(response) {
-                        console.log(response);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error(xhr.responseText);
-                    }
-                });
+                // $.ajax({
+                //     url: '/get-information',
+                //     type: 'POST',
+                //     contentType: 'application/json',
+                //     data: JSON.stringify({ query: transcript }),
+                //     success: function(response) {
+                //         console.log(response);
+                //     },
+                //     error: function(xhr, status, error) {
+                //         console.error(xhr.responseText);
+                //     }
+                // });
             };
 
             recognition.onerror = function(event) {
